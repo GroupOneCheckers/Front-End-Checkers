@@ -15,6 +15,7 @@
 
     <!-- build:css styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/currentGames.css">
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
@@ -49,6 +50,20 @@
       </form>
    </script>
 
+    <script type="text/template" id="currentGamesTemp">
+      <h2>Current Games</h2>
+      <ul id="currentGames">
+        <li><img src="#">Username<a href="#"></li>
+      </ul>
+    </script>
+
+    <script type="text/template" id="leaderboardTemp">
+      <h2>Leaderboard</h2>
+      <ul id="topPlayers">
+
+      </ul>
+    </script>
+
 
     <script>
       window.app = {};
@@ -63,11 +78,14 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+
         <script src="scripts/Collections/user.collection.js"></script>
         <script src="scripts/Collections/player.collection.js"></script>
         <script src="scripts/Models/user.model.js"></script>
         <script src="scripts/Models/checker.model.js"></script>
         <script src="scripts/Models/player.model.js"></script>
+        <script src="scripts/Views/current.games.view.js"></script>
+        <script src="scripts/Views/leaderboard.view.js"></script>
         <script src="scripts/Views/login.view.js"></script>
         <script src="scripts/Views/register.view.js"></script>
         <script src="scripts/Routers/main.routers.js"></script>

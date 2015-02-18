@@ -10,7 +10,9 @@
 
    	routes: {
      	'' : 'login',
-    	'register' : 'register'
+    	'register' : 'register',
+      'currentGames': 'currentGames',
+      'leaderboard': 'leaderboard'
    	},
 
    	login: function () {
@@ -20,7 +22,15 @@
    	register: function () {
    		console.log(app);
     	app.register = new app.RegisterView();
-   	}
+   	},
+
+    currentGames: function () {
+      app.currentGames = new app.CurrentGamesView();
+    },
+
+    leaderboard: function () {
+      app.leaderboard = new app.LeaderboardView();
+    }
 
  	});
 
