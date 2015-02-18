@@ -23,14 +23,31 @@
   </head>
   <body>
 
-    <div class="user-login">
-    <h2>User Login</h2>
+    <div class="main"></div>
+
+
+
+
+<!-- Templates -->
+    <script type="text/template" id="loginTemp">
+      <h2>Login</h2>
       <form>
+          <input id="username-input" placeholder="username"/>
+          <input id="password-input" placeholder="password"/>
+          <button class="register">Register</button>
+          <button class="submit">Submit</button>
+      </form>
+   </script>
+
+   <script type="text/template" id="registerTemp">
+      <h2>Register</h2>
+      <form>
+          <input id="username-input" placeholder="username"/>
           <input id="email-input" placeholder="email"/>
           <input id="password-input" placeholder="password"/>
-          <button>Submit</button>
+          <button class="register">Register</button>
       </form>
-    </div>
+   </script>
 
 
     <script>
@@ -46,10 +63,14 @@
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="scripts/Collections/user.collection.js"></script>
         <script src="scripts/Collections/player.collection.js"></script>
+        <script src="scripts/Models/user.model.js"></script>
         <script src="scripts/Models/checker.model.js"></script>
         <script src="scripts/Models/player.model.js"></script>
-        <script src="scripts/Views/main.view.js"></script>
+        <script src="scripts/Views/login.view.js"></script>
+        <script src="scripts/Views/register.view.js"></script>
+        <script src="scripts/Routers/main.routers.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>

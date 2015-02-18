@@ -4,7 +4,7 @@
 
     model: app.Player,
 
-    url: 'https://ninja-checkers.herokuapp.com/users'
+    // url: 'https://ninja-checkers.herokuapp.com/users'
 
   });
 

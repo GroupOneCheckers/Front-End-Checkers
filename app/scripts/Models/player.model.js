@@ -5,10 +5,7 @@
     idAttribute: '_id',
 
     defaults: {
-      username: '',
-      email: '',
-      password: '',
-      token_auth: '',
+     
     },
 
   });
