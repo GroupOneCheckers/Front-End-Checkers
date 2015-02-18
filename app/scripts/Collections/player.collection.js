@@ -4,7 +4,7 @@
 
     model: app.Player,
 
-    url: 'http://tiy-atl-fe-server.herokuapp.com/collections/group1Users'
+    url: 'https://ninja-checkers.herokuapp.com/users'
 
   });
 
