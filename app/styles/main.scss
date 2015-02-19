@@ -3,8 +3,9 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 //Variables
-$blue: #9DCAED;
+$blue: #4A6AFF;
 $border-blue: #D3ECF8;
+$light-grey: #E4E4E4;
 
 
 
@@ -18,39 +19,48 @@ body {
 
 .main {
   margin: 50px auto 0 auto;
-  width: 600px;
+  min-width: 400px;
+  width: 50%;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
-  background-color: #eee;
+  background-color: #fff;
   border: 1px solid $border-blue;
   border-radius: 6px;
   padding: 60px;
   text-align: center;
-  h2 {
-
-  }
-
-  .register-here {
-    margin: 3%;
-    font-size: 14px;
-  }
   
   form {
     text-align: center;
     input {
       display: block;
       margin: 3% auto;
+      padding: 2% 0px;
+      min-width: 275px;
       width: 75%;
       text-align: center; 
     }
-
-    span {
-      
-    }
-
     button {
       margin: 3%;
+      background: none;
+      border: none;
+      padding: 2% 4%;
+    }
+    .register-here {
+      background-color: $light-grey;
+      color: $blue;
+    }
+    .login-user {
+      background-color: $blue;
+      color: white;
+    }
+    .back-to-login {
+      background-color: $light-grey;
+      color: $blue;
+    }
+    .register-user {
+      background-color: $blue;
+      color: white;
     }
   }
 }
