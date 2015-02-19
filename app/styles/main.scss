@@ -3,16 +3,22 @@
 @import '../../bower_components/neat/app/assets/stylesheets/neat';
 
 //Variables
-$blue: #4A6AFF;
+$button-blue: #4A6AFF;
 $border-blue: #D3ECF8;
 $light-grey: #E4E4E4;
-
-
-
+//Checker Colors
+$red: #B80000;
+$orange: #E46000;
+$yellow: #E9BF00;
+$green: #00AC46;
+$teal: #00ADA9;
+$blue: #3264B0;
+$purple: #8900A2;
+$pink: #FF00DE;
 
 // Custom Styles
 body {
-  background: $blue;
+  background: $button-blue;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #333;
 }
@@ -40,26 +46,30 @@ body {
       width: 75%;
       text-align: center; 
     }
+    input:focus{
+      outline-width: 1px;
+      outline-color: $button-blue;
+    }
     button {
       margin: 3%;
       background: none;
       border: none;
-      padding: 2% 4%;
+      padding: 2% 4%; 
     }
     .register-here {
       background-color: $light-grey;
-      color: $blue;
+      color: $button-blue;
     }
     .login-user {
-      background-color: $blue;
+      background-color: $button-blue;
       color: white;
     }
     .back-to-login {
       background-color: $light-grey;
-      color: $blue;
+      color: $button-blue;
     }
     .register-user {
-      background-color: $blue;
+      background-color: $button-blue;
       color: white;
     }
   }
