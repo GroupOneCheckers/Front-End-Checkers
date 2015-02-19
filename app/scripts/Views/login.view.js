@@ -2,6 +2,9 @@
 
  'use strict';
 
+ var currentUser;
+
+
  app.LoginView = Backbone.View.extend({
 
     // el: '.hero-unit',
@@ -47,36 +50,9 @@
         var userToken = instance.user.authentication_token;
         Cookies.set('authentication_token', userToken);
         app.router.navigate('currentGames', { trigger: true});
+        currentUser = instance;
+        console.log(currentUser);
       });
-
-
-      
-
-
-// createNewStudent: function (e) {
-    //   var nameVal = $(elem).find('input').val();
-
-    //   // Create a New Student Instance
-    //   var s = new app.Student({ name: nameVal });
-
-    //   // Add our student instance to our collection
-    //   // Save our student instance to our server
-    //   this.collection.add(s).save().done( function () {
-    //     // Upon successful save to our server
-    //     // Add our student to our view for our user to see
-    //     var list = self.$el.find('ul');
-    //     list.prepend(self.template(s.attributes));
-    //   });
-
-    //   // Reset our Form
-    //   elem.reset();
-    // },
-
-
-
-
-
-
 
     },
 
@@ -88,27 +64,6 @@
       app.router.navigate('register', { trigger: true});
     }
 
-    // loginUser: function (e) {
-    //   var self = this;
-    //   var list = this.$el.find('ul');
-
-    //   list.empty();
-    //   this.collection.each(function (student) {
-    //     list.prepend(self.template(student.attributes));
-    //   });
-
-    // },
-
-    // registerUser: function (e) {
-    //   var self = this;
-    //   var list = this.$el.find('ul');
-
-    //   list.empty();
-    //   this.collection.each(function (student) {
-    //     list.prepend(self.template(student.attributes));
-    //   });
-
-    // },
 
  });
 

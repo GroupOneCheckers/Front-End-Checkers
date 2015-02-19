@@ -49,9 +49,10 @@
       newRegister.save().done( function(instance) {
         var userToken = instance.user.authentication_token;
         Cookies.set('authentication_token', userToken);
+        app.router.navigate('currentGames', { trigger: true});
       });
 
-      app.router.navigate('currentGames', { trigger: true});
+      
     },
 
 

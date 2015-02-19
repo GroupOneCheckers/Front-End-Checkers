@@ -1,6 +1,6 @@
 (function () {
 
-  app.Player = Backbone.Model.extend({
+  app.Game = Backbone.Model.extend({
 
     idAttribute: '_id',
 

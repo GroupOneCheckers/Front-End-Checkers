@@ -10,7 +10,9 @@
 
 
     events : {
-      //Add submit event
+      //New Game
+      'click .new-game-button': 'createNewGame',
+
       //Add register event
     },
 
@@ -31,6 +33,19 @@
     render: function () {
       this.$el.html(this.template);
     },
+
+
+    createNewGame: function(e) {
+      e.preventDefault();
+
+      var newGame = new app.Game({})
+
+      //create new game model
+      //send token-auth to server
+      
+      //on response - navigate to Game View
+
+    }
 
  });
 

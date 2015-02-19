@@ -1,7 +1,8 @@
 (function () {
 
   //Instances
-  app.user = new app.Login({ user: {username: "Bobby G-Unit", email: "bobby@gunit.com", password: "GgGgGgGUnit"}});
+  app.user = new app.Login();
+
 
   // app.allUsers = new app.UserCol();
 
