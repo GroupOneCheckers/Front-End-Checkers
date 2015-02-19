@@ -30,6 +30,12 @@ body {
   h2 {
 
   }
+
+  .register-here {
+    margin: 3%;
+    font-size: 14px;
+  }
+  
   form {
     text-align: center;
     input {
@@ -38,8 +44,13 @@ body {
       width: 75%;
       text-align: center; 
     }
-    button {
 
+    span {
+      
+    }
+
+    button {
+      margin: 3%;
     }
   }
 }

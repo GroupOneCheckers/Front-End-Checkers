@@ -10,8 +10,11 @@
 
 
     events : {
-      //Add submit event
-      //Add register event
+      //Register
+      'click .register-user': 'registerUser',
+      
+      //Back to Login
+      'click .back-to-login': 'backToLogin'
     },
 
 
@@ -31,6 +34,22 @@
     render: function () {
       this.$el.html(this.template);
     },
+
+
+    registerUser: function (e) {
+      e.preventDefault();
+      console.log('send new registration data to the server, requesting api token');
+
+      app.router.navigate('currentGames', { trigger: true});
+    },
+
+
+    backToLogin: function (e) {
+      e.preventDefault();
+      console.log('back to the login screen');
+
+      app.router.navigate('', { trigger: true});
+    }
 
 
     // loginUser: function (e) {
