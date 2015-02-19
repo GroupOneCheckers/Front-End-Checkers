@@ -1,6 +1,6 @@
 (function () {
 
-  app.User = Backbone.Model.extend({
+  app.Register = Backbone.Model.extend({
 
     idAttribute: '_id',
 
@@ -11,8 +11,6 @@
 	      email: '',
 	      password: '',
 	    },
-
-	    authentication_token: ''
 
     },
 

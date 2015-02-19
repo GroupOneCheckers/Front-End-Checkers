@@ -36,9 +36,20 @@
     },
 
 
+    
     registerUser: function (e) {
+      var self = this;
       e.preventDefault();
-      console.log('send new registration data to the server, requesting api token');
+      
+      var usernameVal = $('.username').val();
+      var emailVal = $('.email').val();
+      var passwordVal = $('.password').val();
+      
+      var newRegister = new app.Register({user:{ username: usernameVal, email: emailVal, password: passwordVal }});
+      newRegister.save().done( function(instance) {
+        var userToken = instance.user.authentication_token;
+        Cookies.set('authentication_token', userToken);
+      });
 
       app.router.navigate('currentGames', { trigger: true});
     },

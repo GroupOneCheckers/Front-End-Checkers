@@ -37,16 +37,20 @@
 
     loginUser: function (e) {
       var self = this;
-
       e.preventDefault();
-      console.log('sending user login data and api token to server');
       
-      var elem = e.currentTarget;
-      console.log(elem);
+      var emailVal = $('.email').val();
+      var passwordVal = $('.password').val();
 
-      var usernameVal = $(elem).find('username').val();
-      console.log(usernameVal);
-      app.router.navigate('currentGames', { trigger: true});
+      var newLogin = new app.Login({user:{ email: emailVal, password: passwordVal }});
+      newLogin.save().done( function(instance) {
+        var userToken = instance.user.authentication_token;
+        Cookies.set('authentication_token', userToken);
+        app.router.navigate('currentGames', { trigger: true});
+      });
+
+
+      
 
 
 // createNewStudent: function (e) {
