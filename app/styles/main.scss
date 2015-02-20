@@ -212,4 +212,11 @@ body {
   &.p2 {
     background-color: red;
   }
+
+  &.selected {
+    border: 3px solid black;
+    background-color: yellow;
+  }
 }
+
+
