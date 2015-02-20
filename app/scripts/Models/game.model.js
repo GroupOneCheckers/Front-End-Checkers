@@ -6,9 +6,9 @@
 
     defaults: {
 
-    	user: {
-    		authentication_token: '',
-    	}
+    
+    	authentication_token: '',
+  
 
     },
 

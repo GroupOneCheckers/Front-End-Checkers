@@ -42,12 +42,11 @@
       var getToken = Cookies.get('authentication_token');
       
       //Send Token to Server
-      var newGame = new app.Game({user:{ authentication_token: getToken }});
+      var newGame = new app.Game({authentication_token: getToken });
         console.log(newGame);
-        newGame.save();
-        // .done( function(instance) {
-          
-        // });
+        newGame.save().done( function(instance) {
+          console.log(instance);
+        });
 
       //create new game model
       
