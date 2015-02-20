@@ -38,15 +38,22 @@
     createNewGame: function(e) {
       e.preventDefault();
 
-      //Get Token
+      //Get Token Value
       var getToken = Cookies.get('authentication_token');
       
-      //Send Token to Server
-      var newGame = new app.Game({authentication_token: getToken });
-        console.log(newGame);
-        newGame.save().done( function(instance) {
-          console.log(instance);
-        });
+      //Create new game Instance
+      app.newGame = new app.Game({ authentication_token: getToken });
+
+      //Send Token to Server      
+      app.newGame.save().done( function(e) {
+        console.log('success');        
+        //Getting to the board array
+        app.newGameArray = e.game.board;
+        console.log(app.newGameArray);
+        app.router.navigate('newGame', {trigger: true});
+
+
+      });
 
       //create new game model
       

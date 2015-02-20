@@ -6,10 +6,8 @@
 
     defaults: {
 
-    
-    	authentication_token: '',
+     	authentication_token: '',
   
-
     },
 
     game: {
@@ -18,6 +16,7 @@
 
     url: 'https://ninja-checkers.herokuapp.com/games'
 
+    
 
   });
 

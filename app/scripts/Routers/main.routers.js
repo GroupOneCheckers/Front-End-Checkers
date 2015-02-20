@@ -12,7 +12,8 @@
      	'' : 'login',
     	'register' : 'register',
       'currentGames': 'currentGames',
-      'leaderboard': 'leaderboard'
+      'leaderboard': 'leaderboard',
+      'newGame': 'newGame'
    	},
 
    	login: function () {
@@ -30,6 +31,10 @@
 
     leaderboard: function () {
       app.leaderboard = new app.LeaderboardView();
+    },
+
+    newGame: function () {
+      app.newGame = new app.GameView();
     }
 
  	});

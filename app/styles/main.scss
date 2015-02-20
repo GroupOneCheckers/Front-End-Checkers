@@ -6,7 +6,8 @@
 $button-blue: #4A6AFF;
 $border-blue: #D3ECF8;
 $light-grey: #E4E4E4;
-$dark-grey: #333333;
+$grey: #555555;
+$dark-grey: #212121;
 //Checker Colors
 $red: #E20000;
 $orange: #E46000;
@@ -157,5 +158,58 @@ body {
         border-radius: 5px;
       }    
     }
+  }
+
+  .board-container {
+
+    .game-board {
+      border-radius: 0px;
+      height: 600px;
+      width: 600px;
+      margin: 0px auto;
+      overflow: hidden;
+      border: 1px solid $grey;
+      position:relative;
+    }
+
+    .black-square {
+      display: inline-block;
+      height: 12.5%;
+      width: 12.5%;
+      background-color: $grey;
+      border-radius: 0px; 
+      float: left;
+    }
+
+    .white-square {
+      height: 12.5%;
+      width: 12.5%;
+      background-color: white;
+      border-radius: 0px;
+      float: left; 
+    }
+
+    .checker {
+        border-radius: 50%;
+        background-color: $red;
+        display: block;
+        width: 50px;
+        height: 50px;
+      }
+
+  }
+}
+
+
+.tcheck {
+  width: 74.75px;
+  height: 74.75px;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+  &.p2 {
+    background-color: red;
   }
 }
