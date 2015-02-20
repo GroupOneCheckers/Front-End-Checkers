@@ -6,8 +6,9 @@
 $button-blue: #4A6AFF;
 $border-blue: #D3ECF8;
 $light-grey: #E4E4E4;
+$dark-grey: #333333;
 //Checker Colors
-$red: #B80000;
+$red: #E20000;
 $orange: #E46000;
 $yellow: #E9BF00;
 $green: #00AC46;
@@ -17,6 +18,11 @@ $purple: #8900A2;
 $pink: #FF00DE;
 
 // Custom Styles
+* {
+  font-size: 62.5%;
+  border-radius: 5px;
+}
+
 body {
   background: $button-blue;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -26,20 +32,37 @@ body {
 .main {
   margin: 50px auto 0 auto;
   min-width: 400px;
-  width: 75%;
+  width: 85%;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
   background-color: #fff;
   border: 1px solid $border-blue;
   border-radius: 6px;
-  padding: 60px;
+  padding: 20px;
   text-align: center;
   
+  .logo {
+    // border-radius: 12%;
+    max-width: 425px;
+    min-width: 275px;
+    width: 75%;
+    text-align: center;
+  }
+
+  h4  {
+    font-size: 3rem;
+    margin: 5% auto;
+  }
+
   form {
     text-align: center;
     input {
+      border: 1px solid $dark-grey;
+      border-radius: 5px;
+      color: $dark-grey;
       display: block;
+      font-size: 2rem;
       margin: 3% auto;
       padding: 2% 0px;
       min-width: 275px;
@@ -48,12 +71,13 @@ body {
     }
     input:focus{
       outline-width: 1px;
-      outline-color: $button-blue;
+      outline-color: $border-blue;
     }
     button {
       margin: 3%;
       background: none;
       border: none;
+      font-size: 1.8rem;
       padding: 2% 4%; 
     }
     .register-here {
@@ -74,11 +98,30 @@ body {
     }
   }
 
+  h2 {
+      color: $dark-grey;
+      font-size: 3rem;
+      margin: 5% 0px;
+
+    }
+
+    .new-game-button {
+      color: white;
+      margin: 5% auto 10px auto;
+      background: $button-blue;
+      border: none;
+      font-size: 2rem;
+      padding: 2% 4%; 
+    }
+
+
   #currentGames {
-    text-align: center;
+    text-align: center; 
+
     ul {
-      margin: 0px auto;
-      width: 85%;
+      margin: 5% auto;
+      width: 95%;
+
     }
     li {
       border: 1px solid $light-grey;
@@ -87,17 +130,26 @@ body {
       padding: 1%;
       overflow: auto; 
 
+
       img {
+        min-width: 50px;
+        max-width: 75px;
         width: 10%;
         border-radius: 5px;
         float: left;
       }  
 
+      span {
+        font-size: 2rem;
+      }
+
       .game-status {
-        height: 50px;
+        min-height: 40px;
         min-width: 100px;
         background-color: $green;
         float: right;
+        font-size: 1.5rem;
+        color: white;
         display: inline-block;
         border-radius: 5px;
       }    

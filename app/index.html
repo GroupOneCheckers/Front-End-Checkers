@@ -27,12 +27,12 @@
     <div class="main"></div>
 
 
-
+<!-- // <h2>Ninja Checkers</h2> -->
 
 <!-- Templates -->
     <script type="text/template" id="loginTemp">
-      <h2>Ninja Checkers</h2>
-      <form>
+      <img class="logo" src="images/current-logo.png">
+      <form defaultbutton="Button2">
           <input class="email" placeholder="email"/>
           <input class="password" type="password" placeholder="password"/>
           <button class="register-here">new? register here</button>
@@ -41,7 +41,7 @@
    </script>
 
    <script type="text/template" id="registerTemp">
-      <h2>Register New Player</h2>
+      <img class="logo" src="images/current-logo.png">
       <form>
           <input class="username" placeholder="username"/>
           <input class="email" placeholder="email"/>
@@ -52,7 +52,8 @@
    </script>
 
     <script type="text/template" id="currentGamesTemp">
-      <h2>Current Games</h2>
+      <button class="new-game-button">Start a New Game</button>
+      <h2>Games In Progress</h2>
       <ul id="currentGames">
         <li>
         <img src="https://avatars3.githubusercontent.com/u/10204335?v=3&s=460">
@@ -60,14 +61,11 @@
         <span class="game-status">Your Move</span>
         </li>
       </ul>
-      <button class="new-game-button">New Game</button>
     </script>
 
     <script type="text/template" id="leaderboardTemp">
       <h2>Leaderboard</h2>
-      <ul id="topPlayers">
-
-      </ul>
+      <ul id="topPlayers"></ul>
     </script>
 
     <script type="text/template" id="gameBoard">
