@@ -38,10 +38,18 @@
     createNewGame: function(e) {
       e.preventDefault();
 
-      var newGame = new app.Game({})
+      //Get Token
+      var getToken = Cookies.get('authentication_token');
+      
+      //Send Token to Server
+      var newGame = new app.Game({user:{ authentication_token: getToken }});
+        console.log(newGame);
+        newGame.save();
+        // .done( function(instance) {
+          
+        // });
 
       //create new game model
-      //send token-auth to server
       
       //on response - navigate to Game View
 

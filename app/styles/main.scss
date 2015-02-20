@@ -21,6 +21,8 @@ $pink: #FF00DE;
 * {
   font-size: 62.5%;
   border-radius: 5px;
+  margin: 0px;
+  padding: 0%;
 }
 
 body {
@@ -31,7 +33,7 @@ body {
 
 .main {
   margin: 50px auto 0 auto;
-  min-width: 400px;
+  min-width: 320px;
   width: 85%;
   font-size: 18px;
   font-weight: 200;
@@ -127,6 +129,7 @@ body {
       border: 1px solid $light-grey;
       border-radius: 5px;
       list-style: none;
+      margin: 2% 0px;
       padding: 1%;
       overflow: auto; 
 
