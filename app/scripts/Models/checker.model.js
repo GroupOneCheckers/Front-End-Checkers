@@ -9,6 +9,11 @@
     	positiony: ''
     },
 
+    pick: {
+    	token_start: '',
+    	token_end: ''
+    }
+
   });
 
 

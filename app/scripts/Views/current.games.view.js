@@ -46,12 +46,10 @@
 
       //Send Token to Server      
       app.newGame.save().done( function(e) {
-        console.log('success');        
         //Getting to the board array
+        console.log(e);
         app.newGameArray = e.game.board;
-        console.log(app.newGameArray);
         app.router.navigate('newGame', {trigger: true});
-
 
       });
 
