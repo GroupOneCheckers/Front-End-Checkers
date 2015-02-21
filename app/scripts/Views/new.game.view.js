@@ -137,6 +137,9 @@
         console.log('in submit move function');
         console.log(app.newMove.attributes);
 
+        //get game id 
+        
+
         //app.router.navigate('' + elemID, { trigger: true });
       },
       
