@@ -99,17 +99,19 @@
       
       var findMatch = app.PiecesCol.findWhere({ positionx: thisCheckerX, positiony: thisCheckerY });
       console.log(findMatch);
+
+
+      //markl array with coords
+      app.gBoard = [];
+      app.gBoard.push(thisCheckerX);
+      app.gBoard.push(thisCheckerY);
+      console.log(app.gBoard);
+
     },
-
-
-    //markl array with coords
-    app.gBoard = [];
-    app.gBoard.push(thisCheckerX);
-    app.gBoard.push(thisCheckerY);
-    console.log(app.gBoard);
+    
 
     selectDest: function(e) {
-      e.preventDefault;
+      e.preventDefault();
 
       //capture destinations coords.
       var thisSquare = e.target;
