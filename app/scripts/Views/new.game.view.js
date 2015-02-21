@@ -41,19 +41,21 @@
 
       this.$el.html(this.template);
 
+      //Create the Board
       this.localGameBoard.forEach( function (element, row) {
         for (var i = 0; i < 8; i++) {
           if (element[i] === 0) {
-            $('.game-board').append('<span dataposx="'+ i +'" dataposy="' + row + '" class="square black-square"></span>');
+            $('.game-board').append('<span class="square black-square"></span>');
           } else {
             $('.game-board').append('<span dataposx="'+ i +'" dataposy="' + row + '"class="square white-square"></span>');
           }
         }
       });
 
-
+      //Create Pieces Collection
       app.PiecesCol = new app.PiecesCollection(); 
 
+      //Place Pieces on the Board
       app.newGameArray.forEach( function (row, r) {
         
         row.forEach( function (piece, c) {
@@ -74,38 +76,39 @@
               var cssClass = 'p2';
             }
 
-            $('.game-board').append('<div dataposx="'+ c +'" dataposy="' + r + '" class="tcheck '+ cssClass +'" style="top:' + (r * 74.75) + 'px; left:' + (c * 74.75) + 'px;"></div>');
-          
+            $('.game-board').append('<div dataposx="'+ c +'" dataposy="' + r + '" class="tcheck '+ cssClass +'" style="top:' + (r * 74.75) + 'px; left:' + (c * 74.75) + 'px;"></div>');          
           }
-
         });
-
       });
-
     },
 
+    //Select a Checker
     selectChecker: function(e) {
       e.preventDefault();
+      
       //capture the checker's html
       var thisChecker = e.target;
+
+      //show selection
       $(thisChecker).toggleClass('selected');
+     
       //get the x and y position
       var thisCheckerX = Number(thisChecker.attributes.dataposx.value);
       var thisCheckerY = Number(thisChecker.attributes.dataposy.value);
-      console.log(thisCheckerX);
-      console.log(thisCheckerY);
 
+      
       var findMatch = app.PiecesCol.findWhere({ positionx: thisCheckerX, positiony: thisCheckerY });
       console.log(findMatch);
 
-      //possible squares
 
       //markl array with coords
       app.gBoard = [];
       app.gBoard.push(thisCheckerX);
       app.gBoard.push(thisCheckerY);
       console.log(app.gBoard);
+
     },
+    
 
     selectDest: function(e) {
       e.preventDefault();
@@ -126,24 +129,23 @@
       console.log(app.gSquare);
     },
 
-      submitMove: function(e) {
+    submitMove: function(e) {
 
-        var getToken = Cookies.get('authentication_token');
+      var getToken = Cookies.get('authentication_token');
 
-        //game data to send to server collected in one place
-        app.newMove = new app.Move({authentication_token: getToken, pick: {token_start: app.gBoard, token_end: app.gSquare }});
+      //game data to send to server collected in one place
+      app.newMove = new app.Move({authentication_token: getToken, pick: {token_start: app.gBoard, token_end: app.gSquare }});
 
-       //button click to send game data to server.
-        console.log('in submit move function');
-        console.log(app.newMove.attributes);
+     //button click to send game data to server.
+      console.log('in submit move function');
+      console.log(app.newMove.attributes);
+
 
         //get game id 
 
-
-        //app.router.navigate('' + elemID, { trigger: true });
-      },
+      //app.router.navigate('' + elemID, { trigger: true });
+    },
       
-
 	});
 
 }());
