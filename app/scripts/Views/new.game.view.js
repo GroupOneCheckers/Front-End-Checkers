@@ -108,7 +108,7 @@
     },
 
     selectDest: function(e) {
-      e.preventDefault;
+      e.preventDefault();
 
       //capture destinations coords.
       var thisSquare = e.target;
@@ -138,7 +138,7 @@
         console.log(app.newMove.attributes);
 
         //get game id 
-        
+
 
         //app.router.navigate('' + elemID, { trigger: true });
       },
