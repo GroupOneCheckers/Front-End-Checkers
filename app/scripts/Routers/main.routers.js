@@ -13,7 +13,8 @@
     	'register' : 'register',
       'currentGames': 'currentGames',
       'leaderboard': 'leaderboard',
-      'newGame': 'newGame'
+      'newGame': 'newGame',
+      'sendMove':'sendMove'
    	},
 
    	login: function () {
@@ -35,6 +36,10 @@
 
     newGame: function () {
       app.newGame = new app.GameView();
+    },
+
+    sendMove: function () {
+      app.newMove = new app.MoveView();
     }
 
  	});

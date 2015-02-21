@@ -7,10 +7,13 @@
     defaults: {
 
      	authentication_token: '',
+
+     	game: {
+    	id: 0,
+    	board: [],
   
     },
 
-    game: {
 
     },
 
