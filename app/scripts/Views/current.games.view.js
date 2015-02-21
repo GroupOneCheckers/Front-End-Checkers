@@ -49,6 +49,8 @@
         //Getting to the board array
         console.log(e);
         app.newGameArray = e.game.board;
+        app.newGameId = e.game.id;
+        console.log(app.newGameArray);
         app.router.navigate('newGame', {trigger: true});
 
       });

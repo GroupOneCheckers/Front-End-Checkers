@@ -7,12 +7,12 @@
     defaults: {
 
      	authentication_token: '',
-  
-    },
 
-    game: {
-    	board: '',
-    	id: '',
+     	game: {
+    	id: 0,
+    	board: [],
+	    }
+  
     },
 
     pick: {
@@ -20,7 +20,7 @@
     	token_end: ''
     },
 
-    url: 'https://ninja-checkers.herokuapp.com/games'
+    url: 'https://ninja-checkers.herokuapp.com/games',
 
     
 

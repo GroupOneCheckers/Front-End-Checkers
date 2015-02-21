@@ -19,7 +19,9 @@
 
 		events: {
 			'click .tcheck': 'selectChecker',
-      'click .white-square': 'selectSquare'
+      'click div .square': 'selectDest',
+      'click .submit-move': 'submitMove',
+
 		},
     
     template: $('#gameBoard').html(),
@@ -99,21 +101,46 @@
       console.log(findMatch);
     },
 
-    //Select a Square
-    selectSquare: function(e) {
-      e.preventDefault();
-      
-      //capture the checker's html
+
+    //markl array with coords
+    app.gBoard = [];
+    app.gBoard.push(thisCheckerX);
+    app.gBoard.push(thisCheckerY);
+    console.log(app.gBoard);
+
+    selectDest: function(e) {
+      e.preventDefault;
+
+      //capture destinations coords.
       var thisSquare = e.target;
 
       //get the x and y position
       var thisSquareX = Number(thisSquare.attributes.dataposx.value);
       var thisSquareY = Number(thisSquare.attributes.dataposy.value);
+      console.log(thisSquareX);
+      console.log(thisSquareY);
 
+      //markl array with coords
+      app.gSquare = [];
+      app.gSquare.push(thisSquareX);
+      app.gSquare.push(thisSquareY);
+      console.log(app.gSquare);
+    },
+
+    submitMove: function(e) {
+
+      var getToken = Cookies.get('authentication_token');
+
+      //game data to send to server collected in one place
+      app.newMove = new app.Move({authentication_token: getToken, pick: {token_start: app.gBoard, token_end: app.gSquare }});
+
+     //button click to send game data to server.
+      console.log('in submit move function');
+      console.log(app.newMove.attributes);
+
+      //app.router.navigate('' + elemID, { trigger: true });
+    },
       
-    }
-    
-
 	});
 
 }());
