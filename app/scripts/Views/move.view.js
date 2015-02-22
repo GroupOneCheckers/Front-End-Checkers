@@ -4,9 +4,8 @@
 
 	app.MoveView = Backbone.View.extend({
 
-
 	});
 
-
+	
 
 }());

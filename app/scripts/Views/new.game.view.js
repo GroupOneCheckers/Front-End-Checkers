@@ -139,6 +139,25 @@
      //button click to send game data to server.
       console.log('in submit move function');
       console.log(app.newMove.attributes);
+      console.log(app.newGameId);
+
+
+      app.newMove.save().done( function(){
+        console.log('saved stupid game move');
+
+
+      });
+
+
+      //  $.ajax({
+      //   // url: 'http://tiy-atl-fe-server.herokuapp.com/collections/bb1988',
+      //   url: "https://ninja-checkers.herokuapp.com/games/" + app.newGameId,
+      //   type: 'PUT',
+      //   contentType: 'application/json',
+      //   data: JSON.stringify(app.newMove.attributes),
+      // }).done(function() {
+      //   console.log('success');
+      // }); 
 
 
         //get game id 

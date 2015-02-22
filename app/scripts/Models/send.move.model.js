@@ -15,7 +15,7 @@
 
     },
     //needs the id added to the end before sending
-    url: 'https://ninja-checkers.herokuapp.com/games'
+    url: 'https://ninja-checkers.herokuapp.com/games/' + app.newGameId
 
   });
 

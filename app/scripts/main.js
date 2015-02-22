@@ -1,5 +1,7 @@
 (function () {
 
+	app.newGameId = 0;
+
   //Instances
   app.user = new app.Login();
 
